@@ -16,6 +16,7 @@ def get_recipe(filter_recipe = None):
         recipes = Recipe.objects.all()
     return recipes
 
+
 def home(request):
     filter_recipe = request.GET.get('recipe')
     if cache.get(filter_recipe):
@@ -29,6 +30,7 @@ def home(request):
             recipe = get_recipe()
     context = {'recipe': recipe}
     return render(request, 'home.html', context)
+    
     
 def show(request, id):
     if cache.get(id):
