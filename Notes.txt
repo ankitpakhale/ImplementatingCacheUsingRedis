@@ -1,0 +1,3 @@
+Redis Implementation Steps
+1.	Connect Redis Server (CACHE SECTION) in settings.py
+2.	
